@@ -1,4 +1,4 @@
-# Proactive AI Rural Family Intelligence Assistant
+# Proactive AI Rural Family Intelligence Assistant (KISSAN)
 
 **Team Name:** The Halucinators
 
