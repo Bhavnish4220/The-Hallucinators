@@ -1,4 +1,4 @@
-# Design Document: Proactive AI Rural Family Intelligence Assistant
+# Design Document: Proactive AI Rural Family Intelligence Assistant (KISSAN)
 
 ## 1. System Overview
 
