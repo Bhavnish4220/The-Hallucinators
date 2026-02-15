@@ -6,6 +6,8 @@ KISSAN AI is a proactive AI-driven welfare monitoring platform designed to suppo
 
 Using AI reasoning combined with policy and knowledge retrieval, the platform identifies risks, determines eligibility for welfare programs, and delivers personalized voice guidance in local language. KISSAN AI is designed to function as an autonomous digital support layer that enhances last-mile delivery of healthcare and government welfare services.
 
+**"KISSAN isn't just a tool; it's a digital member of the family that ensures no one dies from ignorance, no crop fails from delay, and no government benefit goes unclaimed."**
+
 ### Key Design Principles
 
 KISSAN AI architecture prioritizes hybrid edge-cloud operation with intelligent mode switching to ensure seamless functionality regardless of connectivity status:

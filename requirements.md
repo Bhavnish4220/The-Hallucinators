@@ -2,9 +2,11 @@
 
 ## Introduction
 
-KISSAN is an AI-powered companion system designed to serve as a digital family member for rural households in India. The system combines a hardware pin with camera capabilities and a mobile application to provide real-time assistance across health, agriculture, and government benefits. KISSAN aims to prevent deaths from treatable conditions, reduce crop failures, and ensure rural families access all available government benefits through voice-based, local language interaction.
+KISSAN AI is an AI-powered companion system designed to serve as a digital family member for rural households in India. The system combines a hardware pin with camera capabilities and a mobile application to provide real-time assistance across health, agriculture, and government benefits. KISSAN AI aims to prevent deaths from treatable conditions, reduce crop failures, and ensure rural families access all available government benefits through voice-based, local language interaction.
 
-The system employs a hybrid edge-cloud architecture: small, optimized AI models (200-300MB total) run on-device for offline operation with 70-80% accuracy, while comprehensive AWS cloud services (Amazon Bedrock, Rekognition, Transcribe, Polly, SageMaker) provide advanced capabilities with 90-95% accuracy when internet connectivity is available. This dual-mode approach ensures KISSAN remains functional in areas with unreliable connectivity while delivering state-of-the-art AI capabilities when online.
+KISSAN AI employs a hybrid edge-cloud architecture: small, optimized AI models run on-device for offline operation, while comprehensive AWS cloud services (Amazon Bedrock, Rekognition, Transcribe, Polly, SageMaker) provide advanced capabilities when internet connectivity is available. This dual-mode approach ensures KISSAN AI remains functional in areas with unreliable connectivity while delivering state-of-the-art AI capabilities when online.
+
+**"KISSAN isn't just a tool; it's a digital member of the family that ensures no one dies from ignorance, no crop fails from delay, and no government benefit goes unclaimed."**
 
 ## Glossary
 
@@ -30,7 +32,7 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 
 #### Acceptance Criteria
 
-1. WHEN a User describes symptoms via voice, THE Health_Module SHALL provide home remedy suggestions within 10 seconds
+1. WHEN a User describes symptoms via voice, THE Health_Module SHALL provide home remedy suggestions promptly
 2. WHEN a User requests medication guidance, THE Health_Module SHALL specify which tablets to take and dosage timing
 3. IF symptoms indicate a critical condition, THEN THE Health_Module SHALL generate a Critical_Alert recommending immediate hospital visit
 4. WHEN providing health guidance, THE Health_Module SHALL use the User's Local_Language
@@ -54,7 +56,7 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 
 #### Acceptance Criteria
 
-1. WHEN a User captures a crop image with the AI_Pin camera, THE Visual_Analyzer SHALL analyze the image and return Crop_Health_Status within 15 seconds
+1. WHEN a User captures a crop image with the AI_Pin camera, THE Visual_Analyzer SHALL analyze the image and return Crop_Health_Status promptly
 2. WHEN the Visual_Analyzer detects disease or pest infestation, THE Agriculture_Module SHALL identify the specific problem and provide treatment recommendations
 3. WHEN the Visual_Analyzer detects nutrient deficiency, THE Agriculture_Module SHALL recommend specific fertilizers or soil amendments
 4. THE Agriculture_Module SHALL provide guidance in the User's Local_Language
@@ -105,7 +107,7 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 1. THE Voice_Interface SHALL accept voice input in the User's Local_Language
 2. THE Voice_Interface SHALL provide all responses via voice output in the User's Local_Language
 3. WHEN the Voice_Interface cannot understand input, THE KISSAN_System SHALL ask clarifying questions
-4. THE Voice_Interface SHALL support at least 10 major Indian Local_Languages (Hindi, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada, Malayalam, Punjabi, Odia)
+4. THE Voice_Interface SHALL support major Indian Local_Languages (Hindi, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada, Malayalam, Punjabi, Odia)
 5. THE Voice_Interface SHALL operate with acceptable accuracy in noisy rural environments
 
 ### Requirement 8: AI Pin Hardware Functionality
@@ -116,10 +118,10 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 
 1. THE AI_Pin SHALL include a camera capable of capturing clear images in outdoor lighting conditions
 2. THE AI_Pin SHALL provide voice input and output capabilities
-3. THE AI_Pin SHALL operate for at least 12 hours on a single battery charge
+3. THE AI_Pin SHALL operate for extended periods on a single battery charge
 4. THE AI_Pin SHALL connect to the Mobile_App via Bluetooth or WiFi
 5. THE AI_Pin SHALL be water-resistant for use in agricultural environments
-6. THE AI_Pin SHALL be priced affordably for rural household budgets (target: under ₹5000)
+6. THE AI_Pin SHALL be priced affordably for rural household budgets
 
 ### Requirement 9: Mobile App Extension
 
@@ -129,10 +131,10 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 
 1. THE Mobile_App SHALL provide all functionality available through the AI_Pin
 2. THE Mobile_App SHALL use the smartphone camera for visual analysis
-3. THE Mobile_App SHALL work on low-end Android devices (Android 8.0+, 2GB RAM minimum)
+3. THE Mobile_App SHALL work on low-end Android devices with minimal hardware requirements
 4. THE Mobile_App SHALL function with intermittent internet connectivity by caching essential data
 5. THE Mobile_App SHALL synchronize with the AI_Pin when both are available
-6. THE Mobile_App SHALL consume minimal mobile data (under 100MB per month for typical usage)
+6. THE Mobile_App SHALL consume minimal mobile data for typical usage
 
 ### Requirement 10: Real-Time Insights and Response
 
@@ -140,9 +142,9 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 
 #### Acceptance Criteria
 
-1. THE KISSAN_System SHALL provide health guidance responses within 10 seconds of query completion
-2. THE KISSAN_System SHALL provide crop analysis results within 15 seconds of image capture
-3. THE KISSAN_System SHALL provide government scheme information within 5 seconds of query
+1. THE KISSAN_System SHALL provide health guidance responses promptly after query completion
+2. THE KISSAN_System SHALL provide crop analysis results quickly after image capture
+3. THE KISSAN_System SHALL provide government scheme information rapidly upon query
 4. WHEN internet connectivity is unavailable, THE KISSAN_System SHALL provide cached guidance for common queries
 5. THE KISSAN_System SHALL prioritize Critical_Alerts over non-urgent responses
 
@@ -164,10 +166,10 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 
 #### Acceptance Criteria
 
-1. THE AI_Pin SHALL be priced under ₹5000 for rural affordability
+1. THE AI_Pin SHALL be priced affordably for rural households
 2. THE Mobile_App SHALL be free to download and use
 3. THE KISSAN_System SHALL offer a free tier with essential health and agriculture features
-4. WHERE premium features exist, THE KISSAN_System SHALL price them affordably (under ₹100 per month)
+4. WHERE premium features exist, THE KISSAN_System SHALL price them affordably
 5. THE KISSAN_System SHALL work with low-cost smartphones and basic internet connectivity
 
 ### Requirement 13: Privacy and Data Security
@@ -188,12 +190,12 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 
 #### Acceptance Criteria
 
-1. WHEN internet connectivity is unavailable, THE KISSAN_System SHALL use small quantized models (total 200-300MB) stored on device for basic functionality
-2. THE Offline Mode SHALL provide guidance for common health conditions using lightweight DistilBERT and cached knowledge base
-3. THE Offline Mode SHALL provide basic crop disease identification using MobileNet-based models (15MB)
-4. THE Offline Mode SHALL use Whisper-tiny/base (40-75MB) for speech recognition in offline mode
+1. WHEN internet connectivity is unavailable, THE KISSAN_System SHALL use small quantized models stored on device for basic functionality
+2. THE Offline Mode SHALL provide guidance for common health conditions using lightweight models and cached knowledge base
+3. THE Offline Mode SHALL provide basic crop disease identification using optimized models
+4. THE Offline Mode SHALL use efficient speech recognition models in offline mode
 5. WHEN internet connectivity is available, THE KISSAN_System SHALL automatically switch to AWS cloud services (Bedrock, Rekognition, Transcribe, Polly) for advanced analysis
-6. THE Online Mode SHALL provide 90-95% accuracy compared to 70-80% in offline mode
+6. THE Online Mode SHALL provide enhanced accuracy compared to offline mode
 7. THE KISSAN_System SHALL queue non-critical queries for cloud processing when connectivity returns
 8. THE KISSAN_System SHALL clearly indicate current operation mode (Offline/Online/Hybrid)
 9. THE KISSAN_System SHALL synchronize data automatically when connectivity is restored
@@ -206,7 +208,7 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 #### Acceptance Criteria
 
 1. WHEN online, THE KISSAN_System SHALL use Amazon Transcribe for speech recognition with custom medical and agricultural vocabulary
-2. WHEN online, THE KISSAN_System SHALL use Amazon Bedrock (Claude 3 models) for advanced natural language understanding and reasoning
+2. WHEN online, THE KISSAN_System SHALL use Amazon Bedrock (Claude models) for advanced natural language understanding and reasoning
 3. WHEN online, THE KISSAN_System SHALL use Amazon Rekognition Custom Labels and SageMaker-hosted models for detailed image analysis
 4. WHEN online, THE KISSAN_System SHALL use Amazon Polly Neural voices for natural text-to-speech in Indian languages
 5. THE KISSAN_System SHALL store user images in Amazon S3 with appropriate lifecycle policies
@@ -216,7 +218,7 @@ The system employs a hybrid edge-cloud architecture: small, optimized AI models 
 9. THE KISSAN_System SHALL use Amazon Bedrock Knowledge Bases with RAG for comprehensive scheme and medical information
 10. THE KISSAN_System SHALL use Amazon CloudWatch for monitoring and AWS X-Ray for performance tracing
 11. THE KISSAN_System SHALL use Amazon SQS for request queuing and SNS for push notifications
-12. THE KISSAN_System SHALL provide 90-95% accuracy in online mode compared to 70-80% in offline mode
+12. THE KISSAN_System SHALL provide enhanced accuracy in online mode compared to offline mode
 
 ### Requirement 17: Hybrid Mode Operation
 
